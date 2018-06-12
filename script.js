@@ -55,13 +55,12 @@ function deleteTask(id) {
 
 // Alert
 function message(text) {
-    const existingAlert = document.querySelector('.alert alert-info');
-    const container = document.querySelector('.container');
-    //const newAlert =
-
-    if(existingAlert) existingAlert.remove();
-    let div = document.createElement('div');
-    div.textContent = text;
-    div.classList.add('alert', 'alert-info');
-    container.insertAdjacentHTML('afterbegin', text);
+    const existingAlert = document.querySelector('.alert-info');	
+	const container = document.querySelector('.container');		
+	let divElement = document.createElement('div');
+    
+	if(existingAlert) existingAlert.remove();		   
+	divElement.textContent = text;
+	divElement.classList.add('alert', 'alert-info');
+	container.insertBefore(divElement, container.children[0]);	
 }
