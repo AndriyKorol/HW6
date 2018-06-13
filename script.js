@@ -49,7 +49,7 @@ function deleteTask(id) {
     const items = document.querySelectorAll('[data-id]');
     let itemsArray = Array.prototype.slice.call(items);
     itemsArray.forEach(function (li) {
-        if(id === li.dataset.id){li.remove();}
+        if(id === li.dataset.id){message( li.innerHTML + ' -  task is deleted'); li.remove();}
     });
 	message("A task is deleted");
 }
