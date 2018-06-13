@@ -51,6 +51,7 @@ function deleteTask(id) {
     itemsArray.forEach(function (li) {
         if(id === li.dataset.id){li.remove();}
     });
+	message("A task is deleted");
 }
 
 // Alert
