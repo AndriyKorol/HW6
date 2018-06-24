@@ -50,7 +50,7 @@ function deleteTask(id) {
     let itemsArray = Array.prototype.slice.call(items);
     itemsArray.forEach(function (li) {
         if(id === li.dataset.id){
-		message( li.innerHTML + ' -  task is deleted'); 
+		message( `"${li.textContent}" task is deleted`); 
 		li.remove();
 	}
     });
